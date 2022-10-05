@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  proxy:
+    build: ./
+    networks:
+      - messaging.avek.io
+      - statistics.avek.io
+    ports:
+      - "80:80"
+
+networks:
+  messaging.avek.io:
+    external:
+      name: messaging_default
+  statistics.avek.io:
+    external:
+      name: statistics_default
