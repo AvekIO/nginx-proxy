@@ -6,6 +6,9 @@ services:
     networks:
       - messaging.avek.io
       - statistics.avek.io
+      - accounting.avek.io
+      - admin.avek.io
+      - scheduler.avek.io
     ports:
       - "80:80"
 
@@ -16,3 +19,12 @@ networks:
   statistics.avek.io:
     external:
       name: statistics_default
+  accounting.avek.io:
+    external:
+      name: accounting_default
+  admin.avek.io:
+    external:
+      name: admin_default
+  scheduler.avek.io:
+    external:
+      name: scheduler_default
